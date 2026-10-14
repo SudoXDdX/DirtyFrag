@@ -1,4 +1,4 @@
-# Melon Playground SudoXD mod
+# DirtyFrag Galaxy A57 5G
 
 Root temporário para o Samsung Galaxy A57 5G (SM-A576B) sem bootloader desbloqueado, usando a primitiva de escrita no page cache do DirtyFrag (CVE-2026-43284) com um módulo de kernel compilado exatamente pra esse aparelho.
 
