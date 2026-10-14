@@ -2,7 +2,7 @@
 
 Root temporário para o Samsung Galaxy A57 5G (SM-A576B) sem bootloader desbloqueado, usando a primitiva de escrita no page cache do DirtyFrag (CVE-2026-43284) com um módulo de kernel compilado exatamente pra esse aparelho.
 
-Isso nasceu de um fork do trabalho do diabl0w (DFRoot) e do mitschud (DirtyFrag Android), com duas mudanças principais que fizeram ele funcionar no One UI 8:
+Isso nasceu de um fork do trabalho do diabl0w (DFRoot) e do mitschud (DirtyFrag Android), com duas mudanças principais que fizeram ele funcionar no One UI 8.5:
 
 - o gatilho antigo esperava uma função da libc++ que nenhum processo privilegiado chamava no A57, então o hook nunca disparava. Aqui o alvo é o destrutor do LogMessage da libbase, que o init chama a toda hora. O hook dispara em segundos.
 - o dfroot.ko embutido não é mais o genérico de DDK. Ele foi compilado contra a árvore do kernel 6.12.38 do próprio A576B, com vermagic idêntico ao do telefone (6.12.38-android16-5-p0e1ad48-abogkiA576BXXS6AZI2-4k) e os CRCs de modversions extraídos do vmlinux real da atualização de setembro (A576BXXS6AZI2). Isso remove qualquer chance de rejeição por vermagic na hora do insmod.
